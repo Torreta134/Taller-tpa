@@ -11,6 +11,9 @@ class VentanaPrincipal(QMainWindow):
         self.panel_comparacion = QWidget()
         self.boton_ingresar_precio = QPushButton("Ingresar precio")
         self.boton_comparar_precios = QPushButton("Comparar precios")
+        #boton2
+        self.boton_ingresar_precio1 = QPushButton("Ingresar precio")
+        self.boton_comparar_precios1 = QPushButton("Comparar precios")
         self.precios = []
 
         # Crear los widgets para los precios
@@ -22,6 +25,7 @@ class VentanaPrincipal(QMainWindow):
         self.layout_principal.addWidget(self.texto_bienvenida)
         self.layout_principal.addWidget(self.texto_instrucciones)
         self.layout_principal.addWidget(self.boton_ingresar_precio)
+        self.layout_principal.addWidget(self.boton_ingresar_precio1)
         self.layout_principal.addWidget(self.widget_precios)
         self.layout_principal.addWidget(self.panel_comparacion)
         self.layout_principal.addWidget(self.boton_comparar_precios)
@@ -34,6 +38,7 @@ class VentanaPrincipal(QMainWindow):
         # Conectar los botones a las funciones correspondientes
         self.boton_ingresar_precio.clicked.connect(self.ingresar_precio)
         self.boton_comparar_precios.clicked.connect(self.comparar_precios)
+        self.boton_ingresar_precio1.clicked.connect(self.ingresar_precio)
 
     def ingresar_precio(self):
         ventana_ingreso = VentanaIngreso(self)
